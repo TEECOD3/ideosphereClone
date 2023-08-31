@@ -1,9 +1,8 @@
 import { FC } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Hamburger from "./ui/Hamburger";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 interface MobileNavProps {
   hideModalHandler: (barstate: boolean) => void;
   barstate: boolean;
@@ -26,7 +25,7 @@ const HamburgerNav: FC<MobileNavProps> = (props: MobileNavProps) => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 right-0 botton-0 overflow-hidden flex items-center text-white text-4xl justify-center h-screen w-screen bg-[#1B252E] z-[400] text-center"
+        className="fixed top-0 left-0 right-0 botton-0 overflow-hidden flex items-center text-white text-2xl lg:text-4xl justify-center h-screen w-screen bg-[#1B252E] z-[400] text-center"
         variants={item}
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: "100vh", opacity: 1 }}

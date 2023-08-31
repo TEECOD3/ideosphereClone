@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Hamburger = (props: Props) => {
-  const { barstate, barfunction, className, bgclass } = props;
+  const { barstate, barfunction, className } = props;
   return (
     <div
       className={cn(

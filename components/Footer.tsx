@@ -1,11 +1,17 @@
+"use client";
 import React from "react";
-
+import { motion } from "framer-motion";
 type Props = {};
 
 const Footer = (props: Props) => {
   return (
     <footer className="h-[100vh] md:h-[70vh] bg-[#1B252E] py-10 ">
-      <div className="flex flex-col px-5 md:px-20 text-white gap-y-48  items-center justify-between ">
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col px-5 md:px-20 text-white gap-y-48  items-center justify-between "
+      >
         <div className="flex flex-col w-full items-center justify-center gap-y-10">
           <div className="w-full flex items-start  md:items-center justify-center flex-col">
             <h3 className="uppercase text-[10px] lg:text-base font-bold">
@@ -33,7 +39,7 @@ const Footer = (props: Props) => {
           <div className="md:-ml-28">privacy</div>
           <div className="">credits</div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

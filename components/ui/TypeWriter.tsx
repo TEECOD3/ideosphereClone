@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-
+import { motion } from "framer-motion";
 type Props = {};
 
 const TypeWriter = (props: Props) => {
@@ -17,10 +17,17 @@ const TypeWriter = (props: Props) => {
     deleteSpeed: 0,
   });
   return (
-    <span className="uppercase font-black text-2xl lg:text-4xl">
-      {text}
-      <Cursor cursorColor="red" />
-    </span>
+    <motion.div
+      className=""
+      initial={{ y: -20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <span className="uppercase font-black text-2xl lg:text-4xl">
+        {text}
+        <Cursor cursorColor="red" />
+      </span>
+    </motion.div>
   );
 };
 

@@ -78,7 +78,7 @@
 /* ... Your existing CSS code ... */
 
 .bar {
-  width: 70px;
+  width: 60px;
   height: 90px;
   display: flex;
   justify-content: center;

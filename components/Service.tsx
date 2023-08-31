@@ -1,6 +1,8 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { Link } from "lucide-react";
 import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   heading: string;
@@ -12,7 +14,12 @@ const Service = (props: Props) => {
 
   return (
     <li className="border-t-4 py-4 border-black  gap-y-7 flex-col flex">
-      <div className="flex flex-col gap-y-4">
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col gap-y-4"
+      >
         <h4
           className={cn(
             `${
@@ -23,7 +30,7 @@ const Service = (props: Props) => {
           {heading}
         </h4>
         <p className={cn(`leading-[24px] lg:leading-[26px]`)}>{paragraph}</p>
-      </div>
+      </motion.div>
 
       <span className="uppercase  text-sm md:text-base font-bold">
         Readmore
